@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avrilian Putri 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+    font-family:'Poppins',sans-serif;
+    height:100vh;
+    overflow:hidden;
+    background:#000;
+}
+video{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+.overlay{
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(255,0,80,0.2)),
+    radial-gradient(circle at top, rgba(255,150,200,0.25), transparent 60%);
+    z-index:-1;
+}
+.container{
+    height:100vh;
+    overflow-y:auto;
+    text-align:center;
+    padding:20px;
+    color:white;
+    text-shadow:0 0 12px rgba(255,150,200,0.8);
+}
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:48px;
+    margin-top:20px;
+    animation:fadeIn 2s;
+}
+.photo{
+    width:170px;
+    height:170px;
+    border-radius:50%;
+    border:4px solid pink;
+    object-fit:cover;
+    margin:20px auto;
+    animation:float 4s infinite;
+}
+.card{
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    padding:20px;
+    border-radius:20px;
+    margin:15px 0;
+    animation:fadeInUp 2s;
+}
+button{
+    background:linear-gradient(45deg,#ff4b6e,#ff9aa2);
+    border:none;
+    color:white;
+    padding:15px 28px;
+    border-radius:30px;
+    font-size:16px;
+    margin:10px;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,100,150,0.6);
+}
+.hearts span{
+    position:fixed;
+    bottom:-10px;
+    font-size:24px;
+    animation:fly 6s infinite;
+}
+#stars span{
+    position:fixed;
+    width:2px;
+    height:60px;
+    background:linear-gradient(white,transparent);
+    animation:shoot 2s linear infinite;
+}
+
+@keyframes fly{
+    from{transform:translateY(0);opacity:1;}
+    to{transform:translateY(-100vh);opacity:0;}
+}
+@keyframes shoot{
+    from{transform:translateY(-100px);opacity:1;}
+    to{transform:translateY(100vh);opacity:0;}
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+@keyframes fadeInUp{
+    from{opacity:0;transform:translateY(30px);}
+    to{opacity:1;transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎥 Video Background -->
+<video autoplay muted loop playsinline>
+<source src="https://cdn.pixabay.com/vimeo/457631983/love-43317.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
+
+<!-- 🎵 Musik utama -->
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/audio/2022/10/26/audio_4f86e6d87d.mp3">
+</audio>
+
+<div class="container">
+
+<h1>Avrilian Putri 💖</h1>
+
+<!-- GANTI foto Avrilian -->
+<img src="https://imgur.com/a/T94zThR" class="photo">
+
+<div class="card">
+💌 Dari <b>Fajar Riyanto</b><br><br>
+Sayang… di dunia ini mungkin ada jutaan manusia, tapi hanya satu yang membuat jantungku berdegup lebih cepat setiap kali namanya disebut — itu kamu.  
+Setiap senyummu adalah rumah bagiku.  
+Setiap suaramu adalah doa yang menenangkan jiwaku.  
+Aku tidak ingin hidup tanpa kamu, karena sejak kamu datang, hidupku terasa lebih indah, lebih hangat, dan lebih berarti.
+</div>
+
+<div class="card">
+🌹 <b>Valentine Message</b><br><br>
+Aku mencintaimu bukan hanya hari ini, tapi selamanya.  
+Kamu adalah mimpi yang menjadi nyata dalam hidupku.
+</div>
+
+<button onclick="showLove()">💗 Klik kalau kamu cinta aku</button>
+<button onclick="game()">🎮 Game Valentine</button>
+<button onclick="openSurprise()">🎁 Surprise Untuk Kamu</button>
+
+<div class="card" id="result"></div>
+
+</div>
+
+<!-- 🎁 SURPRISE PAGE -->
+<div id="surprisePage" style="
+display:none;
+position:fixed;
+inset:0;
+background:linear-gradient(135deg,#ff4b6e,#ff9aa2);
+z-index:9999;
+color:white;
+text-align:center;
+padding:20px;
+overflow:hidden;
+">
+
+<audio id="surpriseMusic" loop>
+<source src="https://cdn.pixabay.com/audio/2023/03/16/audio_08d63f84f3.mp3">
+</audio>
+
+<h1 style="font-family:'Great Vibes',cursive;font-size:48px;margin-top:30px;">
+Avrilian Putri 💖
+</h1>
+
+<div style="width:260px;height:340px;margin:30px auto;border-radius:20px;overflow:hidden;box-shadow:0 0 30px rgba(255,255,255,0.6);">
+<img id="slide" src="https://i.imgur.com/9G8p9qA.jpg" style="width:100%;height:100%;object-fit:cover;">
+</div>
+
+<p style="font-size:18px;line-height:1.7;">
+Sayang… setiap detik bersamamu adalah hadiah terindah.  
+Aku bersyukur memiliki kamu.  
+Aku mencintaimu lebih dari yang bisa aku tuliskan.
+</p>
+
+<button onclick="closeSurprise()" style="
+margin-top:25px;
+background:white;
+color:#ff4b6e;
+border:none;
+padding:15px 30px;
+border-radius:30px;
+font-size:16px;
+">
+Kembali 💕
+</button>
+
+</div>
+
+<div class="hearts"></div>
+<div id="stars"></div>
+
+<script>
+function showLove(){
+ document.getElementById("result").innerHTML="💕 Kamu adalah alasan aku tersenyum setiap hari. Aku cinta kamu Avrilian Putri 💕";
+}
+function game(){
+ let jawab = prompt("Fajar sayang siapa?");
+ if(jawab && jawab.toLowerCase().includes("avrilian")){
+    alert("BENAR 💖 Kamu adalah cinta sejatinya!");
+ } else {
+    alert("SALAH 😢 Jawabannya Avrilian Putri!");
+ }
+}
+
+const photos=[
+ "https://imgur.com/a/ZPREnrq",
+ "https://imgur.com/a/BkprERI",
+ "https://imgur.com/a/qyZqxER"
+];
+let i=0;
+setInterval(()=>{
+ if(document.getElementById("surprisePage").style.display=="block"){
+    i=(i+1)%photos.length;
+    document.getElementById("slide").src=photos[i];
+ }
+},2500);
+
+function openSurprise(){
+ document.getElementById("surprisePage").style.display="block";
+ document.getElementById("surpriseMusic").play();
+}
+function closeSurprise(){
+ document.getElementById("surprisePage").style.display="none";
+ document.getElementById("surpriseMusic").pause();
+}
+
+setInterval(()=>{
+ let h=document.createElement("span");
+ h.innerHTML="💖";
+ h.style.left=Math.random()*100+"%";
+ h.style.animationDuration=3+Math.random()*4+"s";
+ document.querySelector(".hearts").appendChild(h);
+ setTimeout(()=>h.remove(),6000);
+},300);
+
+setInterval(()=>{
+ let s=document.createElement("span");
+ s.style.left=Math.random()*100+"%";
+ s.style.animationDuration=1+Math.random()*2+"s";
+ document.getElementById("stars").appendChild(s);
+ setTimeout(()=>s.remove(),2000);
+},400);
+</script>
+
+</body>
+</html>
